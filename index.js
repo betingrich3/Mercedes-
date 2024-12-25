@@ -76,9 +76,9 @@ require("./plugins/" + plugin);
 }
 });
 console.log('Plugins Gile Installation Successful')
-console.log('*Bentley Connected. Enjoy*')
+console.log('*Mercedes Connected. Enjoy*')
 
-let up = `*Bugatti Connected*
+let up = `*Mercedes Connected*
 *╭┈───────────────•*
 *│  ◦* *Join Other Followers*
 *│  ◦* *https://shorturl.at/bgxHZ*
@@ -86,10 +86,10 @@ let up = `*Bugatti Connected*
 *│  ◦* *https://youtube.com/@wemacomic*
 *│  ◦* *Prefix: [${prefix}]*
 *╰┈───────────────•*
-*Bugatti Is Active*
+*Mercedes Is Powered By V8 Engine*
 
-> Bugatti By Marisel`;
-conn.sendMessage(conn.user.id, { image: { url: `https://i.imgur.com/eX51M51.jpeg` }, caption: up })
+> Masterminded by Marisel`;
+conn.sendMessage(conn.user.id, { image: { url: `https://i.imgur.com/Hy1gYNz.jpeg` }, caption: up })
 
 }
 })
