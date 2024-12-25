@@ -1,7 +1,7 @@
 {
-  "name": "Bugatti",
+  "name": "Mercedes",
   "description": "Active User Bot",
-  "logo": "https://i.imgur.com/TMyXjOj.jpeg",
+  "logo": "https://files.catbox.moe/140caw.jpg",
   "keywords": ["bot"],
   "success_url": "/",
 
@@ -16,13 +16,13 @@
     "ALIVE_IMG": {
       "description": "If you Change this The bot wont work.",
       "required": true,
-      "value": "https://i.imgur.com/eX51M51.jpeg"
+      "value": "https://files.catbox.moe/76ek6k.jpg"
     }, 
     
     "ALIVE_MSG": {
       "description": "Do not Change This.",
       "required": true,
-      "value": "*Bugatti is Always Active*"
+      "value": "*V8 Engine Runs This Bot*"
     },
     
     "PREFIX": {
@@ -64,7 +64,7 @@
     "BOT_NAME": {
       "description": "write Bot Name here.",
       "required": true,
-      "value": "Bugatti"
+      "value": "Mercedes"
     }, 
     "READ_MESSAGE": {
       "description": "Make it true if you want bot read your all sms just now.",
