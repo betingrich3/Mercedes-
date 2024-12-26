@@ -89,7 +89,7 @@ let up = `*Mercedes Connected*
 *Mercedes Is Powered By V8 Engine*
 
 > Masterminded by Marisel`;
-conn.sendMessage(conn.user.id, { image: { url: `https://i.imgur.com/Hy1gYNz.jpeg` }, caption: up })
+conn.sendMessage(conn.user.id, { image: { url: `https://i.imgur.com/ElSxMXg.jpeg` }, caption: up })
 
 }
 })
