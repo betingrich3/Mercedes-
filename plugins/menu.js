@@ -100005,10 +100005,10 @@ const { runtime } = require('../lib/functions');
 const axios = require('axios');
 
 cmd({
-    pattern: "menu4",
+    pattern: "menu",
     desc: "menu the bot",
     category: "menu",
-    react: "⚡",
+    react: "💐",
     filename: __filename
 }, 
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -100061,7 +100061,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
         // Send audio
         await conn.sendMessage(from, {
-            audio: { url: 'https://github.com/betingrich3/Bentley_DATABASE/blob/main/autovoice/1000337426.mp3' },
+            audio: { url: 'https://github.com/JawadYTX/KHAN-DATA/raw/refs/heads/main/autovoice/sigma.m4a' },
             mimetype: 'audio/mp4',
             ptt: true
         }, { quoted: mek });
