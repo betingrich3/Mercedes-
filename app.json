@@ -84,7 +84,7 @@
      "DESCRIPTION": {
       "description": "add caption for menu and other",
       "required": false,
-      "value": "*Engine by Mercedes"
+      "value": "*Engine by Mercedes*"
     },
 
       "DELETE_LINKS": {
