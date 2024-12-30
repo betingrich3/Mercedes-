@@ -15,11 +15,11 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
     try {
         let dec = `╭━━━〔 *${config.BOT_NAME}* 〕━━━┈⊷
 ┃★╭──────────────
-┃★│ Owner : *${config.OWNER_NAME}
-┃★│ Type : *NodeJs*
-┃★│ Platform : *Heroku*
-┃★│ Mode : *[${config.MODE}]*
-┃★│ Prifix : *[${config.PREFIX}]*
+┃★│ *Owner* : *${config.OWNER_NAME}*
+┃★│ *Type* : *NodeJs*
+┃★│ *Platform* : *Heroku*
+┃★│ *Mode* : *[${config.MODE}]*
+┃★│ *Prifix* : *[${config.PREFIX}]*
 ┃★╰──────────────
 ╰━━━━━━━━━━━━━━━┈⊷
 ╭━━〔 *Download Menu* 〕━━┈⊷
