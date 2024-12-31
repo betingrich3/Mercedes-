@@ -86,7 +86,7 @@ let up = `*Mercedes Connected*
 *│  ◦* *https://youtube.com/@wemacomic*
 *│  ◦* *Prefix: [${prefix}]*
 *╰┈───────────────•*
->*Mercedes is Powered by V8 Engine*
+> *Mercedes is Powered by V8 Engine*
 > *Masterminded By Marisel*`;
 conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/s3scze.jpg` }, caption: up })
 
