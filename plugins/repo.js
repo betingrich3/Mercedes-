@@ -40017,7 +40017,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 > *Don't forget to frok the repo ⤵️*
 *https://github.com/betingrich3/Mercedes/fork*
 > *Get session Id here*
-*https://pairl-f69c1fb8884c.herokuapp.com/`;
+*https://pairl-f69c1fb8884c.herokuapp.com/*`;
         await conn.sendMessage(from, { image: { url: `https://i.imgur.com/YiXXhQQ.jpeg` }, caption: dec, contextInfo: { mentionedJid: [m.sender], forwardingScore: 999, isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363299029326322@newsletter', newsletterName: 'Mercedes', serverMessageId: 143 } } }, { quoted: mek });
 
         // Send audio
