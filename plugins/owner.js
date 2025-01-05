@@ -40029,7 +40029,7 @@ async (conn, mek, m, { from }) => {
 
         // Send the owner contact message with image and audio
         await conn.sendMessage(from, {
-            image: { url: 'https://files.catbox.moe/149k8x.jpg' }, // Image URL from your request
+            image: { url: 'https://i.imgur.com/di6amY6.jpeg' }, // Image URL from your request
             caption: `╭━━〔 *Mercedes* 〕━━┈⊷
 ┃◈╭─────────────·๏
 ┃◈┃• *Here are Marisel's details*
