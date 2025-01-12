@@ -1,16 +1,28 @@
 {
   "name": "Mercedes",
-  "description": "Enjoy",
-  "logo": "https://i.imgur.com/Siem1bb.jpeg",
+  "description": "The Forgotten Project By Marisel",
+  "logo": "https://i.ibb.co/rvh618d/mrfrankofc.jpg",
   "keywords": ["Mercedes"],
   "success_url": "/",
 
     "stack": "container",
   "env": {
     "SESSION_ID": {
-      "description": "Put the session-id here.",
+      "description": "Put the your SubZero session-id here.",
       "required": true,
       "value": ""
+    },  
+    
+    "ALIVE_IMG": {
+      "description": "paste your image url if you don't have you can use this public url.",
+      "required": false,
+      "value": "https://i.ibb.co/YLvvbVp/mrfrankofc.jpg"
+    }, 
+    
+    "LIVE_MSG": {
+      "description": "paste your alive message hear.",
+      "required": false,
+      "value": "> *Mercedes is Active*"
     },
     
     "PREFIX": {
@@ -30,7 +42,7 @@
     "ALWAYS_ONLINE": {
       "description": "Make it true if want always online.",
       "required": false,
-      "value": "false"  
+      "value": "true"  
     },    
   
     "AUTO_VOICE": {
@@ -42,13 +54,13 @@
     "AUTO_REPLY": {
       "description": "Make it true if you want automatic reply.",
       "required": false,
-      "value": "false"
+      "value": "true"
     }, 
 
     "AUTO_STICKER": {
       "description": "Make it true if you want automatic sticker.",
       "required": false,
-      "value": "false"
+      "value": "true"
     }, 
 
 
@@ -60,36 +72,45 @@
 
     "AUTO_STATUS_REPLY": {
       "description": "Make it true for auto reply msg on status seen.",
-      "required": false,
-      "value": "false"
+      "required": true,
+      "value": "true"
     }, 
 
-    "AUTO_STATUS__MSG": {
+    "AUTO_STATUS_MSG": {
       "description": "Type custom message on status reply",
       "required": true,
-      "value": "*Marisel Has Seen your Status*"
+      "value": "*> Mercedes viewed your Status**"
     }, 
+
+    "BOT_NAME": {
+      "description": "Type here the bot name.",
+      "required": false,
+      "value": "*Mercedes*"
+
+      }, 
+
     "ANTI_LINK": {
       "description": "Make it true if you want bot auto remove group link.",
       "required": true,
-      "value": "true"      
+      "value": "true"
+      
     },
     
     "ANTI_BAD": {
       "description": "Make it true if you want bot auto delete bad words.",
       "required": false,
-      "value": "false"
+      "value": "true"
     }, 
 
      "DESCRIPTION": {
       "description": "add caption for menu and other",
       "required": false,
-      "value": "*Engine by Mercedes*"
+      "value": "*Engine By Mercedes*"
     },
 
       "DELETE_LINKS": {
       "description": "remove links from group automatically without removing member",
-      "required": true,
+      "required": false,
       "value": "true"
     },
     
@@ -110,18 +131,24 @@
       "required": false,
       "value": "false"
     },
-
-    "OWNER_REACT": {
-      "description": "Make it true if you only want react on Owner Massages.",
+    
+    "CUSTOM_REACT": {
+      "description": "Make it true if you want custom reactions.",
       "required": false,
       "value": "false"
       
     }, 
     
-    "HEART_REACT": {
-      "description": "Make it true if you want bot only heart 💜 emjois reaction .",
+    "CUSTOM_REACT_EMOJIS": {
+      "description": "put here custom react react emojis.",
       "required": false,
-      "value": "false"
+      "value": "💝,💖,💗,❤️‍🩹,❤️,🧡,💛,💚,💙,💜,🤎,🖤,🤍"
+    }, 
+    
+    "READ_CMD": {
+      "description": "make it true if want mark commands as read.",
+      "required": false,
+      "value": "true"
     }, 
 
     "READ_MESSAGE": {
@@ -139,4 +166,4 @@
      ],
   "stack": "heroku-24"
 }
-
+  
