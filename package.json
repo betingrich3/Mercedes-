@@ -1,7 +1,7 @@
 {
   "name": "Mercedes",
-  "version": "2.0.0",
-  "description": "A WhatsApp Bot Created By Marisel",
+  "version": "1.0.4",
+  "description": "The Forgotten Project By Marisel",
   "main": "index.js",
   "scripts": {
     "start": "pm2 start index.js --deep-monitoring --attach --name Mercedes",
