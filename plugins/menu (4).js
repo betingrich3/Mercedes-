@@ -100102,11 +100102,12 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃◈┃• ytmp3
 ┃◈┃• ytmp4
 ┃◈┃• song
-┃◈┃• darama
+┃◈┃• pin
 ┃◈┃• gdrive
-┃◈┃• smovie
+┃◈┃• nsfw
 ┃◈┃• baiscope 
-┃◈┃• ginisilia 
+┃◈┃• xvideo
+┃◈┃• lyrics
 ┃◈└───────────┈⊷
 ╰──────────────┈⊷
 > ${config.DESCRIPTION}`;
@@ -100225,6 +100226,8 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
         let dec = `╭━━〔 *Fun Menu* 〕━━┈⊷
 ┃◈╭─────────────·๏
+┃◈┃• dare
+┃◈┃• truth
 ┃◈┃• insult
 ┃◈┃• hack
 ┃◈┃• joke
@@ -100457,9 +100460,10 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃◈┃• sticker2
 ┃◈┃• fancy
 ┃◈┃• take
-┃◈┃• tomp3
+┃◈┃• url
 ┃◈┃• tts
 ┃◈┃• trt
+┃◈┃• vv
 ┃◈└───────────┈⊷
 ╰──────────────┈⊷
 > ${config.DESCRIPTION}`;
@@ -100573,12 +100577,16 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         let dec = `╭━━〔 *Ai Menu* 〕━━┈⊷
 ┃◈╭─────────────·๏
 ┃◈┃• ai
-┃◈┃• gpt
+┃◈┃• gpt4
 ┃◈┃• meta
-┃◈┃• blackbox
+┃◈┃• dalle
 ┃◈┃• gpt4
 ┃◈┃• bing
-┃◈┃• copilot
+┃◈┃• simi
+┃◈┃• flux
+┃◈┃• llama
+┃◈┃• gemini
+┃◈┃• gpt3
 ┃◈└───────────┈⊷
 ╰──────────────┈⊷
 > ${config.DESCRIPTION}`;
