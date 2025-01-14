@@ -76,7 +76,7 @@ require("./plugins/" + plugin);
 }
 });
 console.log('Plugins Gile Installation Successful')
-console.log('*Bentley Connected. Enjoy*')
+console.log('*Mercedes Connected. Enjoy*')
 
 let up = `*Mercedes Connected*
 *╭┈───────────────•*
@@ -84,11 +84,11 @@ let up = `*Mercedes Connected*
 *│  ◦* *https://shorturl.at/bgxHZ*
 *│  ◦* *YouTube Tutorials*
 *│  ◦* *https://youtube.com/@wemacomic*
-*│  ◦* *Prefix: [${prefix}]**
+*│  ◦* *Prefix: [${prefix}]*
 *╰┈───────────────•*
-> *Mercedes Is Powered By V8 Engine*
-> *Masterminded By Marisel*`;
-conn.sendMessage(conn.user.id, { image: { url: `https://i.ibb.co/s9hmRVp/mrfrankofc.jpg` }, caption: up })
+> *Mercedes By V8 Engine*
+> *Mercedes By Marisel*`;
+conn.sendMessage(conn.user.id, { image: { url: `https://i.ibb.co/9vN9p2w/mrfrankofc.jpg` }, caption: up })
 
 }
 })
@@ -190,7 +190,7 @@ command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, i
 })
 }
 app.get("/", (req, res) => {
-res.send("Hello, Mercedes is Active");
+res.send("Hello, Bentley is Active");
 });
 app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
 setTimeout(() => {
