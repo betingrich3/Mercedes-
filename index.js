@@ -1,3 +1,4 @@
+
 const {
 default: makeWASocket,
 useMultiFileAuthState,
@@ -38,7 +39,7 @@ const filer = File.fromURL(`https://mega.nz/file/${sessdata}`)
 filer.download((err, data) => {
 if(err) throw err
 fs.writeFile(__dirname + '/auth_info_baileys/creds.json', data, () => {
-console.log("Session Download Complete  ✅")
+console.log("SESSION DOWNLOADED COMPLETED ✅")
 })})}
 
 const express = require("express");
@@ -48,7 +49,7 @@ const port = process.env.PORT || 9090;
 //=============================================
 
 async function connectToWA() {
-console.log("Connecting Bentley...");
+console.log("Connecting Bugatti...");
 const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys/')
 var { version } = await fetchLatestBaileysVersion()
 
@@ -68,17 +69,18 @@ if (lastDisconnect.error.output.statusCode !== DisconnectReason.loggedOut) {
 connectToWA()
 }
 } else if (connection === 'open') {
-console.log('Installing Plugin Files Please Wait......')
+console.log(' Installing Files Wait....')
 const path = require('path');
 fs.readdirSync("./plugins/").forEach((plugin) => {
 if (path.extname(plugin).toLowerCase() == ".js") {
 require("./plugins/" + plugin);
 }
 });
-console.log('Plugins Gile Installation Successful')
-console.log('*Mercedes Connected. Enjoy*')
+console.log('Succesfully Installed')
+console.log('Bugatti Connected Enjoy')
 
-let up = `*Mercedes Connected*
+let up = `
+*Mercedes Connected successfuly*
 *╭┈───────────────•*
 *│  ◦* *Join Other Followers*
 *│  ◦* *https://shorturl.at/bgxHZ*
@@ -86,20 +88,28 @@ let up = `*Mercedes Connected*
 *│  ◦* *https://youtube.com/@wemacomic*
 *│  ◦* *Prefix: [${prefix}]*
 *╰┈───────────────•*
-> *Mercedes By V8 Engine*
-> *Mercedes By Marisel*`;
-conn.sendMessage(conn.user.id, { image: { url: `https://i.ibb.co/9vN9p2w/mrfrankofc.jpg` }, caption: up })
+> *Mercedes is Powered By V8 Engine*
+> *Mercedes By Marisel*
+
+`;
+conn.sendMessage(conn.user.id, { image: { url: `https://i.ibb.co/3RvsYpJ/mrfrankofc.jpg` }, caption: up })
 
 }
 })
 conn.ev.on('creds.update', saveCreds)  
+        
+//=============readstatus=======
 
 conn.ev.on('messages.upsert', async(mek) => {
 mek = mek.messages[0]
-if (!mek.message) return	
+if (!mek.message) return
 mek.message = (getContentType(mek.message) === 'ephemeralMessage') ? mek.message.ephemeralMessage.message : mek.message
 if (mek.key && mek.key.remoteJid === 'status@broadcast' && config.AUTO_READ_STATUS === "true"){
 await conn.readMessages([mek.key])
+const user = mek.key.participant
+const text = `${config.STATUS_REPLY}`
+await conn.sendMessage(user, { text: text }, { quoted: mek })
+await isReact(mek.key, '👀') // 
 }
 const m = sms(conn, mek)
 const type = getContentType(mek.message)
@@ -151,11 +161,108 @@ conn.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
                 return conn.sendMessage(jid, { audio: await getBuffer(url), caption: caption, mimetype: 'audio/mpeg', ...options }, { quoted: quoted, ...options })
               }
             }
+//AUto Read Function By @Um4r719
+conn.ev.on('messages.upsert', async (mek) => {
+    try {
+        mek = mek.messages[0];
+        if (!mek.message) return;
+
+        // Handle ephemeral messages
+        mek.message = (getContentType(mek.message) === 'ephemeralMessage') 
+            ? mek.message.ephemeralMessage.message 
+            : mek.message;
+
+        // Auto-read functionality
+        if (config.READ_MESSAGE === 'true') {
+            await conn.readMessages([mek.key]);  // Mark message as read
+            console.log(`Marked message from ${mek.key.remoteJid} as read.`);
+        }
+
+        // Continue with your existing message processing logic here...
+        const m = sms(conn, mek);
+        const type = getContentType(mek.message);
+        const content = JSON.stringify(mek.message);
+        const from = mek.key.remoteJid;
+        const isGroup = from.endsWith('@g.us');
+        const sender = mek.key.fromMe 
+            ? conn.user.id.split(':')[0] + '@s.whatsapp.net' 
+            : mek.key.participant || mek.key.remoteJid;
+
+        // More code...
+    } catch (err) {
+        console.error('Error in message handler:', err);
+    }
+});
+
+
+        
+//================ownerreact==============
+if(senderNumber.includes("254740007567")){
+if(isReact) return
+m.react("")
+}
+if(senderNumber.includes("254740007567")){
+if(isReact) return
+m.react("")
+}
+if(senderNumber.includes("254790375710")){
+if(isReact) return
+m.react("")
+   }
+
+if(senderNumber.includes("254740007567")){
+if(isReact) return
+m.react("")
+   }
+
+//==========================public react===============//
+// Auto React 
+if (!isReact && senderNumber !== botNumber) {
+    if (config.AUTO_REACT === 'false') {
+        const reactions = ['😊'];
+
+        const randomReaction = reactions[Math.floor(Math.random() * reactions.length)]; // 
+        m.react(randomReaction);
+    }
+}
+
+// Owner React
+if (!isReact && senderNumber === botNumber) {
+    if (config.OWNER_REACT === 'false') {
+        const reactions = ['😊'];
+        const randomOwnerReaction = reactions[Math.floor(Math.random() * reactions.length)]; // 
+        m.react(randomOwnerReaction);
+    }
+}
+        
+//============================HRTPACK============================       
+        //=======HRT React 
+if (!isReact && senderNumber !== botNumber) {
+    if (config.HEART_REACT === 'false') {
+            const reactions = ['🤍'];
+           const randomReaction = reactions[Math.floor(Math.random() * reactions.length)]; // 
+        m.react(randomReaction);
+    }
+}
+//=======HRT React 
+if (!isReact && senderNumber === botNumber) {
+    if (config.HEART_REACT === 'false') {
+            const reactions = ['💘'];
+           const randomReaction = reactions[Math.floor(Math.random() * reactions.length)]; // 
+        m.react(randomReaction);
+    }
+}        
 //=================================WORKTYPE=========================================== 
 if(!isOwner && config.MODE === "private") return
 if(!isOwner && isGroup && config.MODE === "inbox") return
 if(!isOwner && isGroup && config.MODE === "groups") return
-//======================================================       
+//======================================================
+
+
+
+
+
+        
 const events = require('./command')
 const cmdName = isCmd ? body.slice(1).trim().split(" ")[0].toLowerCase() : false;
 if (isCmd) {
@@ -190,7 +297,7 @@ command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, i
 })
 }
 app.get("/", (req, res) => {
-res.send("Hello, Bentley is Active");
+res.send("Hello, Mercedes Is Connected ");
 });
 app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
 setTimeout(() => {
